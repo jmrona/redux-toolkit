@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import pokeReducer from "./reducers/pokeReducer";
-import userReducer from "./reducers/userReducer";
+import logger from "redux-logger";
+import { rootReducer } from "./reducers/rootReducer";
 
 export const store = configureStore({
-  reducer: {
-    pokemons: pokeReducer,
-    user: userReducer,
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => {
+    return [...getDefaultMiddleware(), logger];
   },
 });

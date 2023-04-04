@@ -26,7 +26,6 @@ export const pokemonSlice = createSlice({
       };
     },
     getAllPokemon: (state, action) => {
-      console.log(action.payload);
       return {
         ...state,
         list: [...action.payload.results],

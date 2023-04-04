@@ -1,2 +1,2 @@
-export { userSlice } from "./userReducer";
-export { pokemonSlice } from "./pokeReducer";
+export { default as userReducer } from "./userReducer";
+export { default as pokemonReducer } from "./pokeReducer";
